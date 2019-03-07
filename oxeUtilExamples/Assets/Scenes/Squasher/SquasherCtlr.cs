@@ -12,18 +12,12 @@ public class SquasherCtlr : MonoBehaviour {
   #pragma warning restore 0649
   
 
-	// Use this for initialization
-	void Start () {
+  void Start () {
     _sldL.onValueChanged.AddListener((unused) => OnSlider(false));
     _sldW.onValueChanged.AddListener((unused) => OnSlider(false));
     _sldH.onValueChanged.AddListener((unused) => OnSlider(true ));
     OnSlider(false);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+  }
   
   void OnSlider(bool recalculateLW) {
   
