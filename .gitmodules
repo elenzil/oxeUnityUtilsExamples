@@ -1,0 +1,3 @@
+[submodule "oxeUtilExamples/Assets/oxeUnityUtils"]
+	path = oxeUtilExamples/Assets/oxeUnityUtils
+	url = git@github.com:elenzil/oxeUnityUtils.git
