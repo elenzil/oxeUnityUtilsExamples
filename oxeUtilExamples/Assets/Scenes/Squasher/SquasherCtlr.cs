@@ -22,6 +22,33 @@ public class SquasherCtlr : MonoBehaviour {
   void OnSlider(bool recalculateLW) {
   
     if (recalculateLW) {
+      /*
+      from https://answers.unity.com/questions/1609826/how-to-squash-a-rectangular-prism-without-changing.html?childToView=1610074
+      Let's say your rectangular prism starts off with L, W, H,
+      and you want to sqaush it to some new height h,
+      and calculate the new length and width l and w.
+      L and W change by the same amount, and the volume is unchanged.
+
+      so you want to find d, the delta in L and W:
+
+      setup:
+      1. l                            = L + d
+      2. w                            = W + d
+      3. lwh                          = LWH
+
+      solving:
+      4. (L + d) * (W + d) * h        = LWH
+      5. LW + Ld + Wd + dd            = LWH/h
+      6. dd + d(L + W) +  LW          = LWH/h 
+      7. dd + d(L + W) + (LW - LWH/h) = 0
+      8. dd + d(L + W) + LW(1 - H/h)  = 0
+
+      which is a quadratic equation where
+      A = 1
+      B = L + W
+      C = L * W * (1 - H/h)
+      */
+
       float L = _sldL.value;
       float W = _sldW.value;
       float H = _trnObject.localScale.y;
